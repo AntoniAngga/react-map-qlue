@@ -15,17 +15,14 @@ class App extends Component {
   render() {
     const position = [this.state.lat, this.state.lng]
     return (
-      <Map center={position} zoom={13}>
-    <TileLayer
-      url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    />
-    <Marker position={position}>
-      <Popup>
-        <span>A pretty CSS3 popup.<br/>Easily customizable.</span>
-      </Popup>
-    </Marker>
-  </Map>
+      <div >
+        <Map style={{height: "600px", width: "100%", border: "1px solid black"}} center={position} zoom={13}>
+        <TileLayer
+          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+      </Map>
+      </div>
     );
   }
 }
